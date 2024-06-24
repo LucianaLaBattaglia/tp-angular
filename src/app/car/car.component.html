@@ -1,0 +1,21 @@
+<div class="container">
+<h3>Carrito de compras</h3>
+
+
+<ol class="list-group list-group-numbered">
+  
+    <li class="list-group-item d-flex justify-content-between align-items-start" class="lista" *ngFor="let clothes of carList$|async; let indice=index;" >
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{clothes.type}} {{clothes.name}}</div>
+        <div>Cantidad: {{clothes.quantity}}</div>
+        <div>Precio unid: {{clothes.price|currency }}</div>  
+      <span class="badge text-bg-secondary rounded-pill">{{(clothes.quantity*clothes.price)|currency}}</span>
+       <i class="bi bi-trash"(click)="deleteToCar(indice)"  ></i>
+    </div>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start" class="lista">
+      <span class="total">Total compra: {{total$|async|currency}}</span>
+    </li>
+  </ol>
+
+</div>
