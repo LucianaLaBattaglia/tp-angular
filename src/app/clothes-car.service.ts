@@ -20,16 +20,18 @@ addToCar(clothes:clothes){
   
   let item= this._carList.find((v1)=>v1.name == clothes.name);
   if(!item){
-    if(clothes.quantity>0 && clothes.quantity<clothes.stock){
   this._carList.push({...clothes})
   
-    }
+    
   }else{
-  item.quantity += clothes.quantity;
-  
+    console.log(isNaN(item.quantity))
+    console.log(isNaN(clothes.quantity))
+    item.quantity= item.quantity+1
+  item.quantity =item.quantity+ clothes.quantity;
+  console.log(item.quantity)
   }
 
-  this._cant += clothes.quantity;
+  // this._cant += clothes.quantity;
   this._total=this._total += (clothes.price*clothes.quantity);
   this.carList.next (this._carList);
   this.total.next(this._total);

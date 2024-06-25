@@ -29,30 +29,32 @@ constructor(){}
   }
   
   downQuantity(): void{
-    if(this.quantity>0){
+    if(this.quantity>1){
     this.quantity--;
     this.quantityChange.emit(this.quantity);
     }
     }
 
   changeQuantity(number:number){
- 
+    console.log(number)
+    console.log(this.quantity)
     if(this.max< this.quantity){
       alert("la cantidad supera el stock disponible")
       this.quantity=this.max;
-      this.quantityChange.emit(this.quantity);
+     
       }
      
-      if (this.quantity<0){
+      else if (this.quantity<1){
       alert("ingrese un numero positivo")
-      this.quantity=0
+      this.quantity=1
       
+      }
 
-    }else{
       this.quantityChange.emit(this.quantity);
+      
     }
     }
-  }
+  
   
 
 

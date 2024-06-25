@@ -33,6 +33,9 @@ deleteToCar(indice:number){
 
 }
 
+getPrecioItem(clothes:clothes):number{
+  return clothes.quantity*clothes.price
+}
 
 
 }

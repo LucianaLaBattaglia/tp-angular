@@ -28,7 +28,7 @@ ngOnInit(): void{
 addToCar(clothes:clothes){
   this.car.addToCar(clothes);
   clothes.stock-=clothes.quantity;
-  clothes.quantity=0;
+  clothes.quantity=1;
 
 }
 deleteToCar(indice:number){

@@ -15,7 +15,7 @@ export class ClothesDataService {
   public getAll(): Observable<clothes[]>{
 
     return this.http.get<clothes[]>(URL).pipe(
-      tap((clothess:clothes[])=>clothess.forEach(clothes => clothes.quantity=0)));
+      tap((clothess:clothes[])=>clothess.forEach(clothes => clothes.quantity=1)));
   }
 
 }

@@ -9,7 +9,7 @@
         <div class="fw-bold">{{clothes.type}} {{clothes.name}}</div>
         <div>Cantidad: {{clothes.quantity}}</div>
         <div>Precio unid: {{clothes.price|currency }}</div>  
-      <span class="badge text-bg-secondary rounded-pill">{{(clothes.quantity*clothes.price)|currency}}</span>
+      <span class="badge text-bg-secondary rounded-pill">{{getPrecioItem(clothes)|currency}}</span>
        <i class="bi bi-trash"(click)="deleteToCar(indice)"  ></i>
     </div>
     </li>
