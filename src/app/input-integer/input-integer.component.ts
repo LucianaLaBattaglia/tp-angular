@@ -35,13 +35,11 @@ constructor(){}
     }
     }
 
-  changeQuantity(number:number){
-    console.log(number)
-    console.log(this.quantity)
+  changeQuantity(){
+  
     if(this.max< this.quantity){
       alert("la cantidad supera el stock disponible")
-      this.quantity=this.max;
-     
+      this.quantity=this.max;   
       }
      
       else if (this.quantity<1){
@@ -49,7 +47,7 @@ constructor(){}
       this.quantity=1
       
       }
-
+      
       this.quantityChange.emit(this.quantity);
       
     }

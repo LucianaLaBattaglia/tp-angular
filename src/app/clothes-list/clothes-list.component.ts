@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {clothes} from './clothes';
 import { ClothesCarService } from '../clothes-car.service';
 import { ClothesDataService } from '../clothes-data.service';
-import { Subscriber } from 'rxjs';
+import { Observable, Subscriber } from 'rxjs';
 
 
 @Component({
@@ -13,11 +13,12 @@ import { Subscriber } from 'rxjs';
 export class ClothesListComponent {
 
 clothess: clothes[]=[];
-
+cant$: Observable <number>;
 
 
 constructor(private car: ClothesCarService, private clothesDataService: ClothesDataService){
-
+  this.cant$= car.cant.asObservable();
+  
   
 }
 ngOnInit(): void{

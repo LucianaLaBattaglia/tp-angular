@@ -8,13 +8,14 @@
     <img class="card-img-top" [src]="clothes.image"[alt]="clothes.name">
     <div class="card-body">
     <h5 class="card-title"> {{ clothes.type }} {{ clothes.name }}</h5>
-    <p class="card-text" [ngClass]="{'text-decoration-line-through':clothes.sale}" >{{ clothes.price |currency}}</p>
+    <p class="card-text" >{{ clothes.price |currency}}</p>
     @if (clothes.stock >0) {
-      <p>Stock: {{ clothes.stock }}</p>
+      <p>Stock: {{ clothes.stock}}</p>
     } @else {
       <p><span class="badge text-bg-secondary">SIN STOCK</span></p>
     }
-    <div class="d-flex"><app-input-integer [(quantity)]="clothes.quantity" [max]="clothes.stock" *ngIf="clothes.stock"></app-input-integer>
+  
+    <div class="d-flex"*ngIf="clothes.stock"><app-input-integer [(quantity)]="clothes.quantity" [max]="clothes.stock" *ngIf="clothes.stock"></app-input-integer>
          <button class="btn btn-secondary btn-sm" (click)="addToCar(clothes)">Comprar <i class="bi bi-cart4"></i></button>
     </div>
   </div>

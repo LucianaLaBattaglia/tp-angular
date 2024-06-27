@@ -27,10 +27,11 @@ ngOnInit(): void{
 deleteToCar(indice:number){
   let cant=
   this.car.deleteToCar(indice);
-  // clothes.stock+=clothes.quantity;
-  // clothes.quantity=0;
+ 
+}
 
-
+empycar(){
+  this.car.empycar();
 }
 
 getPrecioItem(clothes:clothes):number{

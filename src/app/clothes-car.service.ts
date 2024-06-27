@@ -24,11 +24,9 @@ addToCar(clothes:clothes){
   
     
   }else{
-    console.log(isNaN(item.quantity))
-    console.log(isNaN(clothes.quantity))
-    item.quantity= item.quantity+1
-  item.quantity =item.quantity+ clothes.quantity;
-  console.log(item.quantity)
+    
+     item.quantity=item.quantity + clothes.quantity;
+  
   }
 
   // this._cant += clothes.quantity;
@@ -39,9 +37,19 @@ addToCar(clothes:clothes){
 }
 
 deleteToCar(index: number){
-  this._total=this._total -= (this._carList[index].price*this._carList[index].quantity);
+ 
+  this._cant=this._carList[index].quantity
+  this._total=this._total - (this._carList[index].price*this._carList[index].quantity);
   this._carList.splice(index, 1);
   this.carList.next (this._carList);
   this.total.next(this._total);
+  this.cant.next(this._cant)
 }
+
+empycar(){
+  this._carList.splice(0,this._carList.length)
+  this._total=0;
+  this.total.next(this._total)
+}
+
 }

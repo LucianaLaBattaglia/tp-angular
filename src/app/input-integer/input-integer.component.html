@@ -1,6 +1,6 @@
 <div class="container">
 <button class="btn btn-outline-secondary btn-sm"  (click)="downQuantity()">-</button>
-<input type="text" [(ngModel)]="quantity" (focusout)="changeQuantity(quantity)">
+<input type="number" [(ngModel)]="quantity" (keyup)="changeQuantity()">
 <button class="btn btn-outline-secondary btn-sm" (click)="upQuantity()">+</button>
 
 </div>

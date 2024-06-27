@@ -1,3 +1,7 @@
+
+h3{
+    text-align: center;
+}
 .container{
     border-color:rgb(226, 203, 221);
     border-style: solid;
@@ -18,4 +22,9 @@
     margin-left:  20px;
     text-align: center;
     font-weight: bold ;
+}
+.btn-vaciar{
+    display: flex;;
+    align-items:end;
+    justify-content: center;
 }
