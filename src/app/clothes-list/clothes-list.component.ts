@@ -13,12 +13,11 @@ import { Observable, Subscriber } from 'rxjs';
 export class ClothesListComponent {
 
 clothess: clothes[]=[];
-cant$: Observable <number>;
 
+carList$: Observable <clothes[]>;
 
 constructor(private car: ClothesCarService, private clothesDataService: ClothesDataService){
-  this.cant$= car.cant.asObservable();
-  
+  this.carList$= car.carList.asObservable();
   
 }
 ngOnInit(): void{
@@ -31,9 +30,7 @@ addToCar(clothes:clothes){
   clothes.stock-=clothes.quantity;
   clothes.quantity=1;
 
-}
-deleteToCar(indice:number){
-  this.car.deleteToCar(indice);
+}  
   
   
 
@@ -42,5 +39,4 @@ deleteToCar(indice:number){
 
 
 
-}
 

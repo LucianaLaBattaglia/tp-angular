@@ -45,7 +45,6 @@ constructor(){}
       else if (this.quantity<1){
       alert("ingrese un numero positivo")
       this.quantity=1
-      
       }
       
       this.quantityChange.emit(this.quantity);

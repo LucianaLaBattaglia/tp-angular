@@ -1,7 +1,7 @@
 
 # TEMATICA DEL PROYECTO
 
-La tematica elegida para el proyecto fue el desarrollo de un e-comers de una tienda de indumentaria
+La tematica elegida para el proyecto fue el desarrollo de un e-commerce de una  tienda de indumentaria
 
 # ESTUDIANTE:
 LA BATTAGLIA LUCIANA PAOLA

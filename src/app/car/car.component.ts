@@ -30,8 +30,8 @@ deleteToCar(indice:number){
  
 }
 
-empycar(){
-  this.car.empycar();
+emptycar(){
+  this.car.emptycar();
 }
 
 getPrecioItem(clothes:clothes):number{

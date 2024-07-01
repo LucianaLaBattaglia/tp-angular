@@ -29,7 +29,6 @@ addToCar(clothes:clothes){
   
   }
 
-  // this._cant += clothes.quantity;
   this._total=this._total += (clothes.price*clothes.quantity);
   this.carList.next (this._carList);
   this.total.next(this._total);
@@ -37,16 +36,15 @@ addToCar(clothes:clothes){
 }
 
 deleteToCar(index: number){
- 
-  this._cant=this._carList[index].quantity
-  this._total=this._total - (this._carList[index].price*this._carList[index].quantity);
+   this._total=this._total - (this._carList[index].price*this._carList[index].quantity);
   this._carList.splice(index, 1);
   this.carList.next (this._carList);
   this.total.next(this._total);
-  this.cant.next(this._cant)
+  
 }
 
-empycar(){
+emptycar(){
+
   this._carList.splice(0,this._carList.length)
   this._total=0;
   this.total.next(this._total)

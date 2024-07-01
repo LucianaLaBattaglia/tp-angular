@@ -4,17 +4,16 @@
     
 @for (clothes of clothess ; track clothes.name) {
 
-    <div class="card" style="width: 15rem" [ngClass]="{'sale':clothes.sale}">
+    <div class="card" style="width: 16rem" [ngClass]="{'sale':clothes.sale}">
     <img class="card-img-top" [src]="clothes.image"[alt]="clothes.name">
     <div class="card-body">
     <h5 class="card-title"> {{ clothes.type }} {{ clothes.name }}</h5>
     <p class="card-text" >{{ clothes.price |currency}}</p>
     @if (clothes.stock >0) {
-      <p>Stock: {{ clothes.stock}}</p>
+    <!-- <p>Stock: {{ clothes.stock}}</p> -->
     } @else {
       <p><span class="badge text-bg-secondary">SIN STOCK</span></p>
     }
-  
     <div class="d-flex"*ngIf="clothes.stock"><app-input-integer [(quantity)]="clothes.quantity" [max]="clothes.stock" *ngIf="clothes.stock"></app-input-integer>
          <button class="btn btn-secondary btn-sm" (click)="addToCar(clothes)">Comprar <i class="bi bi-cart4"></i></button>
     </div>
