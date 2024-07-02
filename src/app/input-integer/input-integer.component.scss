@@ -7,7 +7,9 @@ input{
     color: grey;
 }
 .container{
+   display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 input[type=number]::-webkit-inner-spin-button, 

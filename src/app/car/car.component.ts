@@ -22,12 +22,11 @@ total$: Observable <number>;
   }
 
 ngOnInit(): void{
-
 }
+
 deleteToCar(indice:number){
   let cant=
   this.car.deleteToCar(indice);
- 
 }
 
 emptycar(){
