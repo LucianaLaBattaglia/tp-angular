@@ -10,7 +10,7 @@
         <div>Cantidad: {{clothes.quantity}}</div>
         <div>Precio unid: {{clothes.price|currency }}</div>  
       <span class="badge text-bg-secondary rounded-pill">{{getPrecioItem(clothes)|currency}}</span>
-       <i class="bi bi-trash"(click)="deleteToCar(indice)"  ></i>
+       <i class="trash" class="bi bi-trash"(click)="deleteToCar(indice)"  ></i>
     </div>
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-start" class="lista">
@@ -18,5 +18,8 @@
     </li>
      
   </ol>
-  <div class="btn-vaciar"><button class="btn btn-secondary" (click)="emptycar()">vaciar carrito</button></div>
+  <div class="btn-car"><button class="btn btn-secondary"(click)="emptycar()">vaciar carrito</button>
+                          <button class="btn btn-secondary" (click)="buy()">Comprar</button>
+  
+  </div>
 </div>

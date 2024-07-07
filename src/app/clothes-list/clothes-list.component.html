@@ -15,7 +15,7 @@
       <p><span class="badge text-bg-secondary">SIN STOCK</span></p>
     }
     <div class="d-flex"*ngIf="clothes.stock"><app-input-integer [(quantity)]="clothes.quantity" [max]="clothes.stock" *ngIf="clothes.stock"></app-input-integer>
-         <button class="btn btn-secondary btn-sm" (click)="addToCar(clothes)">Comprar <i class="bi bi-cart4"></i></button>
+         <button class="btn btn-secondary btn-sm" (click)="addToCar(clothes)">Agregar <i class="bi bi-cart4"></i></button>
     </div>
   </div>
   </div>

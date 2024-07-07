@@ -33,6 +33,11 @@ emptycar(){
   this.car.emptycar();
 }
 
+buy(){
+  alert("Gracias por tu compra!")
+  this.car.emptycar();
+}
+
 getPrecioItem(clothes:clothes):number{
   return clothes.quantity*clothes.price
 }
